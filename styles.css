@@ -1,0 +1,868 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --------------------------------------------------- */
+
+.retour{
+	clear: both;
+}
+
+html, body{
+	width:100%;
+	height:100%;
+	font-family: 'Poiret One', cursive;
+}
+
+.font_tall{
+	font-size:24px;
+	line-height:30px;
+}
+
+.font_small{
+	font-size:15.5px;
+	line-height:15px;
+}
+
+h2{
+	font-size:30px;	
+	float: left;
+	margin-right: 15px;
+	border-bottom: 3.5px solid #ff0000;
+}
+
+h2 img{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 1px inset #ff0000;
+	margin-bottom: -12px;
+}
+
+h3{
+	font-size:30px;
+	font-weight:bold;
+	border-bottom:2px dashed #FC6;	
+	margin-bottom:15px;	
+	height:55px;
+	line-height:60px;
+	text-align: left;
+}
+
+h4{
+	font-size:20px;	
+	margin-bottom:5px;
+	font-weight:bold;
+}
+
+h5{
+	font-family: 'euphorigenicregular';
+	font-size:40px;
+	letter-spacing:2px;
+	color:#ffffff;
+	margin-bottom:10px;
+}
+
+#menu{
+	position: fixed;
+	z-index: 20;
+	top:0;
+	width: 100%;
+	height:60px;
+	line-height: 60px;
+	background-image: url(images/background_slider.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#home_btn{
+	float: left;
+    height: 60px;
+    margin-left: 15px;
+    margin-top: 3px;
+    width: 150px;
+	overflow: hidden;
+}
+
+#home_btn a{
+	display: block;
+}
+
+#home_btn a img{
+	width: 100%;
+}
+
+nav{
+	float: right;
+}
+
+nav ul li{
+	float: left;
+}
+
+nav ul li a{
+	padding: 16px 20px;
+	text-decoration: none;
+	font-size: 16px;
+	color: #fff;
+	border-bottom: 4px solid rgba(0,0,0,0.00);
+	border-top: 4px solid rgba(0,0,0,0.00);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+nav ul li a:hover{
+	font-size: 18px;
+	border-bottom: 3.5px solid #FC6;
+}
+
+nav ul li a.active{
+	font-size: 18px;
+	border-bottom: 3.5px solid #ff0000;
+}
+
+#navicon{
+	display: none;
+}
+
+#actualite{
+	width:250px;
+	position:fixed;
+	z-index:10000;
+	right:-250px;
+	top:15%;
+}
+
+#actualite_contenu{
+	width:95%;
+	background:#ffffff;
+	border-radius:0 0 0 15px;
+	padding:15px 15px 30px 15px;
+	border:2px solid #FC6;
+	text-align:justify;
+	min-height: 150px;
+}
+
+#actualite_contenu p{
+	padding:2px 0;
+}
+
+#actu_titre{
+	width:145px;
+	height:40px;
+	transform: rotate(270deg);
+	position:absolute;
+	left:-102px;
+	top:63px;
+	border-radius:15px 15px 0 0;
+	background:#FC6;
+	padding:0 10px;
+	cursor:pointer;
+}
+
+#actualite h3{
+	height:35px;
+	line-height:40px;
+	margin-bottom:5px;
+	border-bottom:none;
+}
+
+#actualite h3 img{
+	margin-bottom: -7px;
+}
+
+
+
+header{
+	background-image: url(images/header.jpg);
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+header img{
+	margin: auto;
+	width: 35%;
+}
+
+header .txt{
+	color:#ffffff;
+	text-align:left;
+	position:absolute;
+	bottom:20px;
+	right:0;
+	left:0;
+	margin:0 auto;
+	width:50%;
+	padding:10px;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius:15px;	
+}
+
+
+/* ----------------------- scroll btn -------------------- */
+
+#scroll{
+	position:absolute;
+	z-index: 2;
+	bottom:15px;
+	right:20px;
+	-webkit-animation:SlideScroll 5s;
+	-moz-animation:SlideScroll 5s;
+	animation:SlideScroll 5s;
+}
+
+#scroll_btn{
+	border-radius:13px;
+	-webkit-box-shadow: 0 0 6px 3px #426084;
+	-moz-box-shadow: 0 0 6px 3px #426084;
+ 	box-shadow: 0 0 4px #426084;
+	margin:0px auto;
+	background-color:#fff;
+	width:30px;
+	line-height:20px;
+	height:48px;
+    -webkit-transition: box-shadow 0.2s;
+    -moz-transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s;
+	behavior: url(pie/PIE.php);
+}
+
+#scroll_btn:hover{
+	box-shadow: 0 0 10px #ffffff;
+}
+
+#scroll_btn a{
+	font-weight:bold;
+	color:#426084;
+	text-align: center;
+	line-height: 60px;
+	height: 60px;
+	display: block;
+	-webkit-animation: scrollin 3s infinite;
+	-moz-animation: scrollin 3s infinite;
+	animation: scrollin 3s infinite;
+}
+
+@-webkit-keyframes scrollin{
+	0%{line-height: 60px;}
+	100%{line-height: 20px;}
+}
+
+#scroll_btn i{
+	color:#ff0000;
+}
+
+
+
+/* ----------------------- section -------------------- */
+
+section{
+	width: 100%;
+}
+
+.content{
+	width: 80%;
+	padding: 100px 0;
+	margin: 0 auto;
+}
+
+.content .txt{
+	text-align:left;
+	margin:0 auto;
+	width:60%;
+	padding:10px;
+	border-bottom: 3px dashed #FC6;
+	margin-bottom: 25px;
+}
+
+.content .txt p{
+	padding:12px;
+}
+
+
+
+/* ----------------------- presentation -------------------- */
+
+#presentation{
+	
+}
+
+#presentation_title{
+	width:60%;
+	margin: 0 auto;
+}
+
+#staff{
+	width: 100%;
+}
+
+.staff_content{
+	width: 33.33%;
+	float: left;
+	text-align: center;
+}
+
+
+
+/* ----------------------- horaires -------------------- */
+
+
+#horaires{
+	background:url(images/barber.jpg) top fixed;
+	background-size:cover;
+}
+
+.horaires_2{
+	display: none;
+}
+
+.day{
+	width: 14.28%;
+	float: left;
+}
+
+.contenu_horaire{
+	margin:0 auto;
+	width:120px;
+	height:90px;
+	padding-top: 30px;
+	background-color:#5b8068;
+	border-radius:50%;	
+	text-align:center;
+}
+
+.day .off{
+	background-color:#343434;
+}
+
+
+.contenu_horaire p span{
+	font-family: 'euphorigenicregular';
+	font-size:40px;
+	letter-spacing:2px;
+	color:#ffffff;
+	margin-bottom:10px;
+}
+
+.contenu_horaire p{
+	font-size:15px;	
+	font-weight:bold;
+	color:#ffffff;
+}
+
+
+
+/* ----------------------- adresse -------------------- */
+
+
+#adresse{
+	text-align:center;
+}
+
+#adresse a{
+	color: #000;
+	text-decoration: none;
+}
+
+
+
+/* ----------------------- prestations -------------------- */
+
+
+#prestations{
+}
+
+.price_wrap{
+	float: left;
+	width: 20%;
+	margin: 0 2.5%;
+}
+
+.price{
+	text-align: center;
+	background-image: url(images/background_slider.jpg);
+	background-attachment: fixed;
+	background-size: cover;	padding: 25px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.price_wrap h5{
+	border-bottom: dotted 5px #ffffff;
+	margin-bottom: 20px;
+	font-size: 30px;
+}
+
+.price_wrap p{
+	font-family: 'Homemade Apple', cursive;
+	color: #ffffff;
+	margin-bottom: 5px;
+}
+
+.price_wrap .right{
+	font-size: 30px;
+	margin-bottom: 0;
+}
+
+
+/* ----------------------- partenaires -------------------- */
+
+#partenaires{
+	background-image: url(images/background_slider.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	overflow: hidden;
+}
+
+#partenaires .content_left{
+	width:50%;
+	float: left;
+}
+
+#partenaires .content_right{
+	width:50%;
+	float: left;
+}
+
+.partenaire{
+	width:33.33%;
+	text-align: center;
+	float: left;
+}
+
+.partenaire a img{
+	width: 170px;
+	height: 170px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+
+
+
+/* ----------------------- contact -------------------- */
+
+#contact{
+	background-image: url(images/background_slider.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	color: #fff;
+}
+
+#contact .content{
+	padding: 100px 0 20px;
+}
+
+#map{
+	pointer-events:none;
+}
+
+#contact a{
+	color: #fff;
+	text-decoration: none;
+}
+
+#contact .ss_content{
+	width: 33.33%;
+	float: left;
+}
+
+#contact ul li{
+	margin-bottom: 5px;
+	text-transform: uppercase;
+}
+
+#contact ul li ul li{
+	padding-left: 10px;
+	text-transform: none; 
+}
+
+footer{
+	width:100%;
+	text-align:center;
+	font-size:12px;
+	height: 60px;
+	line-height: 60px;
+}
+
+
+
+
+/* ----------------------- formulaire -------------------- */
+
+#monForm{
+	width:100%;
+}
+
+#monForm fieldset{
+	color:#ffffff;
+	padding: 0 15px 15px 15px;
+	border:1px solid #ffffff;
+}
+
+#monForm legend{
+	padding:0 10px;
+	color:#ffffff;
+	width:auto;
+}
+
+#monForm label{
+	line-height:25px;
+	width:25%;
+	height:25px;
+}
+
+#monForm p{
+	margin:10px 0;
+	font-size:12px;
+}
+
+#monForm input{
+	width:70%;
+	float:right;
+	margin-bottom:5px;
+}
+
+#monForm textarea{
+	width:98.5%;
+	resize:vertical;
+	height:50px;
+}
+
+#monForm input[type="checkbox"]{
+	width:15px;
+	margin-right:8px;
+}
+
+#monForm input[type="submit"]{
+	width:100px;
+	float:left;
+	height:20px;
+	font-size:12px;
+	color:#000000;
+}
+
+#monForm input[type="reset"]{
+	width:100px;
+	float:right;
+	height:20px;
+	font-size:12px;
+	color:#000000;
+}
+
+#monForm input[type="submit"]:hover, #monForm input[type="reset"]:hover{
+	cursor:pointer;
+}
+
+
+
+
+/* ----------------------- formulaire -------------------- */
+
+
+@media screen and (max-width:980px) {	
+	h3{
+		font-size: 25px;
+	}
+	
+	h5 {
+		font-size: 30px;
+	}
+	
+	.content{
+		width: 90%;
+		padding: 50px 0;
+	}
+	
+	.presta_price {
+		width: 70%;
+	}
+	
+	.contenu_horaire p {
+		font-size: 12px;
+	}	
+
+	.contenu_horaire {
+		height: 75px;
+		padding-top: 25px;
+		width: 100px;
+	}
+	
+	.partenaire a img {
+		height: 100px;
+		width: 100px;
+	}
+	
+	#contact .content {
+		padding: 50px 0 0;
+	}
+}
+
+@media screen and (max-width:768px) {
+	body, html{
+		font-size: 14px;
+	}	
+	
+	#actualite{
+		display: none;
+	}
+	
+	h3{
+		font-size: 20px;
+	}
+	
+	header img {
+		width: 50%;
+	}
+	
+	#home_btn {
+		height: 50px;
+		margin-top: 2px;
+		width: 130px;
+	}
+
+	nav ul li a {
+		font-size: 14px;
+		padding: 16.5px 15px;
+	}
+	
+	nav ul li a.active {
+		font-size: 16px;
+	}
+	
+	.content .txt {
+		width: 80%;
+	}
+	
+	.day{
+		width: 20%;
+	}
+	
+	.day .off {
+	    display: none;
+	}
+	
+	.partenaire a img {
+		height: 90px;
+		width: 90px;
+	}
+	
+	#contact .ss_content {
+		width: 50%;
+	}
+	
+	#contact .ss_content:nth-child(2) {
+		display: none;
+	}
+	
+	#map {
+		height: 200px;
+		overflow: hidden;
+	}
+
+	.price_wrap h5{
+		font-size: 20px;
+	}
+
+	
+}
+
+@media screen and (max-width:640px) {
+	
+	h2{
+		width: 100%;
+	}
+	
+	header .txt{
+		display: none;
+	}
+	
+	#menu, #partenaires, #contact{
+		background-image: none !important;
+		background-color: #000;	}
+	
+	#navicon{
+		display: inline-block;
+		height: 60px;
+		line-height: 70px;
+		position: fixed;
+		right: 0;
+		text-align: center;
+		top: 0;
+		width: 60px;
+		z-index: 20;
+		overflow: hidden;
+	}
+	
+	#navicon a{
+		display: block;
+		color: #fff;
+	}
+	
+	nav {
+		float: right;
+		position: fixed;
+		right: -120px;
+		top: 60px;
+	}
+	
+	nav ul li{
+		float: none;
+		text-align: center;
+		background-image: none;
+		background-color: #000;
+		width: 120px;
+	}
+	
+	.staff_content {
+		float: none;
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	.staff_content img{
+		width: 200px;
+	}
+	
+	.horaires_1{
+		display: none;
+	}
+	
+	.horaires_2{
+		display: block;
+	}
+	
+	.horaires_2 .off{
+		display: block;
+	}
+	
+	.contenu_horaire {
+		height: 85px;
+		padding-top: 35px;
+		width: 120px;
+	}
+	
+	h5{
+		font-size: 27px;
+	}
+	
+	.day{
+		width: 50%;
+	}
+	
+	.price_wrap{
+		float: none;
+		width: 70%;
+		margin: 5% auto;
+	}
+	
+	#partenaires .content_left, #partenaires .content_right{
+		float: none;
+		width: 100%;
+	}
+	
+	#partenaires .content_left{
+		margin-bottom: 50px;
+	}
+	
+	#contact .ss_content{
+		margin-bottom: 10px;
+		width: 100%;
+		float: none;
+	}
+	
+	footer {
+		height: 40px;
+		line-height: 40px;
+	}
+
+	
+}
+
+@media screen and (max-width:480px) {
+	
+	#scroll{
+		bottom: 8px;
+		right: 10px;
+	}
+	
+	header img{
+		width: 70%;
+	}
+	
+	header .txt{
+		width: 70%;
+	}
+	
+	.partenaire a img {
+		height: 70px;
+		width: 70px;
+	}
+	
+	footer span{
+		display: none;
+	}
+	
+	
+}
+
+
+
+
+
